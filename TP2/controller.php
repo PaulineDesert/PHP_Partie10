@@ -3,6 +3,7 @@
 $regexString = '/^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ-]{2,20}$/';
 $regexCivility = '/^(Mr)$|^(Mme)$/';
 $regexAge = '/^(12[0-0]|1[01][0-9]|[1-9]?[0-9])$/';
+$errorMessage = '';
 
 $checkCivility = isset($_POST['civility']) && preg_match($regexCivility, $_POST['civility']);
 $checkFirstName = isset($_POST['firstName']) && preg_match($regexString, $_POST['firstName']);
